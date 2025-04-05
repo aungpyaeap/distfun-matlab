@@ -8,7 +8,7 @@ A collection of distance metrics for data clustering algorithms.
 * A data point is denoted by $x_i \in \mathbb{R}^m$ where each $x$ is a vector of $m$ features.
 * A distance metric $d: \mathbb{R}^m \times \mathbb{R}^m \rightarrow \mathbb{R}_+ \cup \{0\}$ is a function that quantifies degree of separation (distance) between pair of data points.
 * A similarity metric $s: x_i \times x_j \rightarrow \mathbb{R}$ is a function that quantifies degree of likeness (similarity) between pair of data points.
-* The distance matrix $D$ is an $n \times n$ matrix where each entry $D_{ij}$ represents distance between data points $x_i$ and $x_j$. Mathematical representation is as follows.
+* The distance matrix $D$ is an $n \times n$ matrix where each entry $D_{ij}$ represents distance between data points $x_i$ and $x_j$. For all data points, $D_{ij} = [x_{ij}]\in \mathbb{R}^{n \times n}$ represents a symmetric matrix of distances.
 
 ## Distance metrics included in repository
     euclidean   - Euclidean distance.
