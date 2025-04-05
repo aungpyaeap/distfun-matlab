@@ -11,13 +11,9 @@ A collection of distance metrics for data clustering algorithms.
 * The distance matrix $D$ is an $n \times n$ matrix where each entry $D_{ij}$ represents distance between data points $x_i$ and $x_j$. For all data points, $D_{ij} = [x_{ij}]\in \mathbb{R}^{n \times n}$ represents a symmetric matrix of distances.
 
 For any distance metric, the following conditions must be satisfied for any three data points $x_i, x_j, x_k$.
-$
-\begin{align*}
-    (1) \quad & d(x_i, x_j) = 0 \Leftrightarrow x_i = x_j & \text{[Identity]} \\
-    (2) \quad & d(x_i, x_j) = d(x_j, x_i) & \text{[Symmetry]} \\
-    (3) \quad & d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) & \text{[Triangle inequality]}
-\end{align*}
-$
+* (1) $d(x_i, x_j) = 0 \Leftrightarrow x_i = x_j \text{[Identity]}$
+* (2) $d(x_i, x_j) = d(x_j, x_i) \text{[Symmetry]}$
+* (3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
 
 ## Distance metrics included in repository
     euclidean   - Euclidean distance.
