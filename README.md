@@ -4,7 +4,7 @@
 A collection of distance metrics for data clustering algorithms.
 
 ## Definitions
-* A dataset is denoted by $X = \{x_1,x_2,\cdots,x_n\} \in \mathbb{R}^m$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
+* A dataset is denoted by $X^{n \times m}$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
 * A data point is denoted by $x_i \in \mathbb{R}^m$ where each $x$ is a vector of $m$ features.
 * A distance metric $d: \mathbb{R}^m \times \mathbb{R}^m \rightarrow \mathbb{R}_+ \cup \{0\}$ is a function that quantifies degree of separation (distance) between pair of data points.
 * A similarity metric $s: x_i \times x_j \rightarrow \mathbb{R}$ is a function that quantifies degree of likeness (similarity) between pair of data points.
