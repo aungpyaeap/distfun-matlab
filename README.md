@@ -1,6 +1,6 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-# DISTFUN-MATLAB: A collection of distance metric functions for data clustering algorithms
+# Distance Metrics Toolkit (DISTFUN-MATLAB): A collection of distance metric functions for numerical and categorical data dissimilarity
 This repository contains MATLAB functions designed to construct dissimilarity matrices using a variety of distance metric functions. It provides a comprehensive toolkit for analyzing and comparing data sets through different distance measures.
 `ComputeDist(X,dname)` function returns $n \times n$ dissimilarity matrix.
 
