@@ -94,7 +94,22 @@ disp(D);
 ## Converting distance into similarity
 For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
 
+**Example usage.**
+```m
+X = rand(10,2);
+D = ComputeDist(X, 'cosine');
+S = 1 - D;
+disp(S);
+```
 For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right)$, where $\sigma > 0$ is a parameter [9].
+
+**Example usage.**
+```m
+X = rand(10,2);
+D = ComputeDist(X, 'euclidean');
+S = exp(-D.^2);
+disp(S);
+```
 
 ## References
 
