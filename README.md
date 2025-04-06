@@ -10,7 +10,7 @@ A collection of distance metrics for data clustering algorithms. `ComputeDist(X,
 - A similarity metric $s: x_i \times x_j \rightarrow \mathbb{R}$ is a function that quantifies degree of likeness (similarity) between pair of data points.
 - The distance matrix $D$ is an $n \times n$ matrix where each entry $D_{ij}$ represents distance between data points $x_i$ and $x_j$. For all data points, $D_{ij} = [x_{ij}]\in \mathbb{R}^{n \times n}$ represents a symmetric matrix of distances.
 
-For any distance metric, the following conditions must be satisfied for any three data points $x_i, x_j, x_k$ [1, 2].
+For any distance metric, the following conditions must be satisfied for any three data points $x_i, x_j, x_k$ [6][7].
 
 (1) $d(x_i, x_j) = 0 \Leftrightarrow x_i = x_j \quad \text{[Identity]}$
 
