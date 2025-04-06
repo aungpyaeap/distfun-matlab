@@ -101,7 +101,7 @@ D = ComputeDist(X, 'cosine');
 S = 1 - D;
 disp(S);
 ```
-For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right)$, where $\sigma > 0$ is a parameter [9].
+For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right)$, where $\sigma > 0$ is a parameter [9][10].
 
 **Example usage.**
 ```m
@@ -130,3 +130,5 @@ disp(S);
 [8]:[Miyamoto, S. (2022). Theory of agglomerative hierarchical clustering (2022nd ed.). Singapore, Singapore: Springer.](https://link.springer.com/book/10.1007/978-981-19-0420-2)
 
 [9]:[Von Luxburg, U. (2007). A tutorial on spectral clustering. Statistics and computing, 17, 395-416.](https://link.springer.com/article/10.1007/s11222-007-9033-z)
+
+[10]:[The MathWorks, Inc. (2025). Statistics and machine learning toolbox (Version 24.2.0 R2024b). The MathWorks, Inc.](https://www.mathworks.com/products/statistics.html)
