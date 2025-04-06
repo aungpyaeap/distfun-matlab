@@ -16,18 +16,18 @@ For any distance metric, the following conditions must be satisfied for any thre
 - (3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
 
 ## Distance metrics included in repository
-    euclidean   		- Euclidean distance.
-	sqeuclidean			- Squared Euclidean distance. (Does not satisfy the triangle inequality.)
-    cityblock   		- City block distance.
-    chebyshev   		- Chebyshev distance.
-    canberra    		- Canberra distance.
-    cosine      		- Cosine distance. (Does not satisfy triangle inequality.)
-    corr        		- Correlation distance.
-    clark       		- Clark distance.
-    soergel     		- Soergel distance.
-    hamming     		- Hamming distance.
-    jaccard     		- Jaccard distance.
-    dice        		- Dice distance.
+    euclidean - Euclidean distance.
+	sqeuclidean - Squared Euclidean distance. (Does not satisfy the triangle inequality.)
+    cityblock - City block distance.
+    chebyshev - Chebyshev distance.
+    canberra - Canberra distance.
+    cosine - Cosine distance. (Does not satisfy triangle inequality.)
+    corr - Correlation distance.
+    clark - Clark distance.
+    soergel - Soergel distance.
+    hamming - Hamming distance.
+    jaccard - Jaccard distance.
+    dice - Dice distance.
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BEuclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5C%7Cx_i%20-%20x_j%5C%7C_2%20%3D%20%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2%7D" alt="\text{Euclidean distance: }d(x_i,x_j) = \|x_i - x_j\|_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}" />
 
@@ -64,7 +64,7 @@ For any distance metric, the following conditions must be satisfied for any thre
 | Canberra distance          | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive}                      |
 | Cosine distance            | Numerical          | $[0, +1]$            | \cite{Wierzchon2018modern}                       |
 | Correlation distance       | Numerical          | $[0, +2]$            | \cite{Wierzchon2018modern}                       |
-| Clark distance             | Numerical          | $[0, +\infty\rangle$ | \cite{abu2019effects}                            |
+| Clark distance             | Numerical          | $[0, +\infty\rangle$ | [1]                           |
 | Soergel distance           | Numerical          | $[0, +1]$            | \cite{cha2007comprehensive}                      |
 | Hamming distance           | Categorical        | $[0, +\infty\rangle$ | \cite{hamming1950error}                          |
 | Jaccard distance           | Categorical        | $[0, +1]$            | \cite{murphy1996finley}                          |
@@ -72,5 +72,8 @@ For any distance metric, the following conditions must be satisfied for any thre
 
 
 ## References
+
+[1]: Abu Alfeilat, H. A., Hassanat, A. B., Lasassmeh, O., Tarawneh, A. S., Alhasanat, M. B., Eyal Salman, H. S., & Prasath, V. S. (2019). Effects of distance measure choice on k-nearest neighbor classifier performance: a review. Big data, 7(4), 221-248.
+
 1. [Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
 2. [Wierzchon, S. T., & Klopotek, M. (2018). Modern Algorithms of Cluster Analysis (1st ed.). Cham, Switzerland: Springer International Publishing.](https://link.springer.com/book/10.1007/978-3-319-69308-8)
