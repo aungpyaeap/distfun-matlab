@@ -16,19 +16,18 @@ For any distance metric, the following conditions must be satisfied for any thre
 - (3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
 
 ## Distance metrics included in repository
-    euclidean   	- Euclidean distance.
-	sqeuclidean		- Squared Euclidean distance. (Does not satisfy the triangle inequality.)
-    cityblock   	- City block distance.
-    chebyshev   	- Chebyshev distance.
-    canberra    	- Canberra distance.
-    cosine      	- Cosine distance. (Does not satisfy triangle inequality.)
-    cosine      	- Square root cosine distance.
-    corr        	- Correlation distance.
-    clark       	- Clark distance.
-    soergel     	- Soergel distance.
-    hamming     	- Hamming distance.
-    jaccard     	- Jaccard distance.
-    dice        	- Dice distance.
+    euclidean   		- Euclidean distance.
+	sqeuclidean			- Squared Euclidean distance. (Does not satisfy the triangle inequality.)
+    cityblock   		- City block distance.
+    chebyshev   		- Chebyshev distance.
+    canberra    		- Canberra distance.
+    cosine      		- Cosine distance. (Does not satisfy triangle inequality.)
+    corr        		- Correlation distance.
+    clark       		- Clark distance.
+    soergel     		- Soergel distance.
+    hamming     		- Hamming distance.
+    jaccard     		- Jaccard distance.
+    dice        		- Dice distance.
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BEuclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5C%7Cx_i%20-%20x_j%5C%7C_2%20%3D%20%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2%7D" alt="\text{Euclidean distance: }d(x_i,x_j) = \|x_i - x_j\|_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}" />
 
@@ -55,6 +54,22 @@ For any distance metric, the following conditions must be satisfied for any thre
 <img src="https://i.upmath.me/svg/%5Ctext%7BJaccard%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%20%5Ccup%20x_j%7C%7D%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20(x_%7Bik%7D%20%2B%20x_%7Bjk%7D)%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D" alt="\text{Jaccard distance: }d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}" />
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BDice%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B2%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%7C%20%2B%20%7Cx_j%7C%7D%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B2%20%5Ccdot%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%2B%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bjk%7D%7D%20%5Cright%5D" alt="\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]" />
+
+| Distance Name     | Data Type | Range       | Ref.                                    |
+|----------------------------|--------------------|----------------------|--------------------------------------------------|
+| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
+| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
+| City block distance        | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
+| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
+| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive}                      |
+| Cosine distance            | Numerical          | $[0, +1]$            | \cite{Wierzchon2018modern}                       |
+| Correlation distance       | Numerical          | $[0, +2]$            | \cite{Wierzchon2018modern}                       |
+| Clark distance             | Numerical          | $[0, +\infty\rangle$ | \cite{abu2019effects}                            |
+| Soergel distance           | Numerical          | $[0, +1]$            | \cite{cha2007comprehensive}                      |
+| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | \cite{hamming1950error}                          |
+| Jaccard distance           | Categorical        | $[0, +1]$            | \cite{murphy1996finley}                          |
+| Dice distance              | Categorical        | $[0, +1]$            | \cite{dice1945measures}                          |
+
 
 ## References
 1. [Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
