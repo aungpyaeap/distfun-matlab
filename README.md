@@ -37,19 +37,20 @@ disp(D);
 ```
 
 ## Distance metrics included in repository
-    euclidean - Euclidean distance.
-	sqeuclidean - Squared Euclidean distance. (Does not satisfy the triangle inequality.)
-    cityblock - City block distance.
-    chebyshev - Chebyshev distance.
-    canberra - Canberra distance.
-    cosine - Cosine distance. (Does not satisfy triangle inequality.)
-    corr - Correlation distance.
-    clark - Clark distance.
-    soergel - Soergel distance.
-    hamming - Hamming distance.
-    jaccard - Jaccard distance.
-    dice - Dice distance.
+    euclidean	- Euclidean distance.
+	sqeuclidean - Squared Euclidean distance. (Does not satisfy triangle inequality.)
+    cityblock	- City block distance.
+    chebyshev	- Chebyshev distance.
+    canberra	- Canberra distance.
+    cosine		- Cosine distance. (Does not satisfy triangle inequality.)
+    corr		- Correlation distance.
+    clark		- Clark distance.
+    soergel		- Soergel distance.
+    hamming		- Hamming distance.
+    jaccard		- Jaccard distance.
+    dice		- Dice distance.
 
+### Distance metric formulas
 <img src="https://i.upmath.me/svg/%5Ctext%7BEuclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5C%7Cx_i%20-%20x_j%5C%7C_2%20%3D%20%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2%7D" alt="\text{Euclidean distance: }d(x_i,x_j) = \|x_i - x_j\|_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}" />
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
@@ -76,7 +77,7 @@ disp(D);
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BDice%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B2%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%7C%20%2B%20%7Cx_j%7C%7D%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B2%20%5Ccdot%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%2B%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bjk%7D%7D%20%5Cright%5D" alt="\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]" />
 
-
+### Distance metric data type and ranges
 | Distance Name     | Data Type | Range       | Ref.                                    |
 |----------------------------|--------------------|----------------------|--------------------------------------------------|
 | Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
