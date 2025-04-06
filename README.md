@@ -30,11 +30,11 @@ For any distance metric, the following conditions must be satisfied for any thre
     jaccard     - Jaccard distance.
     dice        - Dice distance.
 
-Euclidean distance: $d(x_i,x_j) = \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
+Euclidean distance: $$d(x_i,x_j) = \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$$
 
-City block distance: $d(x_i,x_j) = \sum_{k=1}^m |x_{ik} - x_{jk}|$
+City block distance: $$d(x_i,x_j) = \sum_{k=1}^m |x_{ik} - x_{jk}|$$
 
-Chebyshev distance: $ d(x_i,x_j) = \max_{k=1}^m |x_{ik} - x_{jk}|$
+Chebyshev distance: $$d(x_i,x_j) = \max_{k=1}^m |x_{ik} - x_{jk}|$$
 
 Canberra distance: $d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$
 
