@@ -30,17 +30,27 @@ For any distance metric, the following conditions must be satisfied for any thre
     jaccard     - Jaccard distance.
     dice        - Dice distance.
 
-- Euclidean distance: $d(x_i,x_j) = \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
-- City block distance: $d(x_i,x_j) = \sum_{k=1}^m |x_{ik} - x_{jk}|$
-- Chebyshev distance: $ d(x_i,x_j) = \max_{k=1}^m |x_{ik} - x_{jk}|$
-- Canberra distance: $d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$
-- Cosine distance: $d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\|x_i\| \|x_j\|} = 1 - \left[ \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}} \right]$
-- Correlation distance: $d(x_i,x_j) = 1 - \left[ \frac{\sum_{k=1}^{m} (x_{ik} - \bar{x}_i)(x_{jk} - \bar{x}_j)}{\sqrt{\sum_{k=1}^{m} (x_{ik} - \bar{x}_i)^2} \sqrt{\sum_{k=1}^{m} (x_{jk} - \bar{x}_j)^2}} \right]$
-- Clark distance: $d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}$
-- Soergel distance: $d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}$
-- Hamming distance: $d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})$
-- Jaccard distance: $d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}$
-- Dice distance: $d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]$
+Euclidean distance: $d(x_i,x_j) = \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
+
+City block distance: $d(x_i,x_j) = \sum_{k=1}^m |x_{ik} - x_{jk}|$
+
+Chebyshev distance: $ d(x_i,x_j) = \max_{k=1}^m |x_{ik} - x_{jk}|$
+
+Canberra distance: $d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$
+
+Cosine distance: $d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\|x_i\| \|x_j\|} = 1 - \left[ \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}} \right]$
+
+Correlation distance: $d(x_i,x_j) = 1 - \left[ \frac{\sum_{k=1}^{m} (x_{ik} - \bar{x}_i)(x_{jk} - \bar{x}_j)}{\sqrt{\sum_{k=1}^{m} (x_{ik} - \bar{x}_i)^2} \sqrt{\sum_{k=1}^{m} (x_{jk} - \bar{x}_j)^2}} \right]$
+
+Clark distance: $d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}$
+
+Soergel distance: $d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}$
+
+Hamming distance: $d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})$
+
+Jaccard distance: $d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}$
+
+Dice distance: $d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]$
 
 ## References
 1. [Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
