@@ -11,9 +11,29 @@ A collection of distance metrics for data clustering algorithms.
 - The distance matrix $D$ is an $n \times n$ matrix where each entry $D_{ij}$ represents distance between data points $x_i$ and $x_j$. For all data points, $D_{ij} = [x_{ij}]\in \mathbb{R}^{n \times n}$ represents a symmetric matrix of distances.
 
 For any distance metric, the following conditions must be satisfied for any three data points $x_i, x_j, x_k$ [1, 2].
-- (1) $d(x_i, x_j) = 0 \Leftrightarrow x_i = x_j \quad \text{[Identity]}$
-- (2) $d(x_i, x_j) = d(x_j, x_i) \quad \text{[Symmetry]}$
-- (3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
+
+(1) $d(x_i, x_j) = 0 \Leftrightarrow x_i = x_j \quad \text{[Identity]}$
+
+(2) $d(x_i, x_j) = d(x_j, x_i) \quad \text{[Symmetry]}$
+
+(3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
+
+## Usage
+**For numerical dataset.**
+```m
+X = readmatrix('fisheriris.csv');
+dname = 'euclidean'; % Choose distance name
+D = ComputeDist(X, dname);
+disp(D);
+```
+**For categorical dataset.**
+```m
+T = readtable('sample.csv', VariableNamingRule='preserve');
+X = T{:,:}; % Convert table to array
+dname = 'hamming'; % Choose distance name
+D = ComputeDist(X, dname);
+disp(D);
+```
 
 ## Distance metrics included in repository
     euclidean - Euclidean distance.
@@ -74,7 +94,7 @@ For any distance metric, the following conditions must be satisfied for any thre
 
 [1]:[Abu Alfeilat, H. A., Hassanat, A. B., Lasassmeh, O., Tarawneh, A. S., Alhasanat, M. B., Eyal Salman, H. S., & Prasath, V. S. (2019). Effects of distance measure choice on k-nearest neighbor classifier performance: a review. Big data, 7(4), 221-248.](https://doi.org/10.1089/big.2018.0175)
 
-[2]:[Cha, S. H. (2007). Comprehensive survey on distance/similarity measures between probability density functions. City, 1(2), 1.]
+[2]:[Cha, S. H. (2007). Comprehensive survey on distance/similarity measures between probability density functions. City, 1(2), 1.](https://pdodds.w3.uvm.edu/research/papers/others/everything/cha2007a.pdf)
 
 [3]:[Dice, L. R. (1945). Measures of the amount of ecologic association between species. Ecology, 26(3), 297-302.](https://doi.org/10.2307/1932409)
 
