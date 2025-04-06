@@ -16,21 +16,23 @@ For any distance metric, the following conditions must be satisfied for any thre
 - (3) $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j) \quad \text{[Triangle inequality]}$
 
 ## Distance metrics included in repository
-    euclidean   - Euclidean distance.
-	sqeuclidean	- Squared Euclidean distance. (Does not satisfy the triangle inequality.)
-    cityblock   - City block distance.
-    chebyshev   - Chebyshev distance.
-    canberra    - Canberra distance.
-    cosine      - Cosine distance. (Does not satisfy triangle inequality.)
-    cosine      - Square root cosine distance.
-    corr        - Correlation distance.
-    clark       - Clark distance.
-    soergel     - Soergel distance.
-    hamming     - Hamming distance.
-    jaccard     - Jaccard distance.
-    dice        - Dice distance.
+    euclidean   	- Euclidean distance.
+	sqeuclidean		- Squared Euclidean distance. (Does not satisfy the triangle inequality.)
+    cityblock   	- City block distance.
+    chebyshev   	- Chebyshev distance.
+    canberra    	- Canberra distance.
+    cosine      	- Cosine distance. (Does not satisfy triangle inequality.)
+    cosine      	- Square root cosine distance.
+    corr        	- Correlation distance.
+    clark       	- Clark distance.
+    soergel     	- Soergel distance.
+    hamming     	- Hamming distance.
+    jaccard     	- Jaccard distance.
+    dice        	- Dice distance.
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BEuclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5C%7Cx_i%20-%20x_j%5C%7C_2%20%3D%20%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2%7D" alt="\text{Euclidean distance: }d(x_i,x_j) = \|x_i - x_j\|_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}" />
+
+<img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
 
