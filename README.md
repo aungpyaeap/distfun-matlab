@@ -57,19 +57,18 @@ For any distance metric, the following conditions must be satisfied for any thre
 
 | Distance Name     | Data Type | Range       | Ref.                                    |
 |----------------------------|--------------------|----------------------|--------------------------------------------------|
-| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
-| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
-| City block distance        | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
-| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive, Wierzchon2018modern} |
-| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | \cite{cha2007comprehensive}                      |
-| Cosine distance            | Numerical          | $[0, +1]$            | \cite{Wierzchon2018modern}                       |
-| Correlation distance       | Numerical          | $[0, +2]$            | \cite{Wierzchon2018modern}                       |
-| Clark distance             | Numerical          | $[0, +\infty\rangle$ | [1]                           |
-| Soergel distance           | Numerical          | $[0, +1]$            | \cite{cha2007comprehensive}                      |
-| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | \cite{hamming1950error}                          |
-| Jaccard distance           | Categorical        | $[0, +1]$            | \cite{murphy1996finley}                          |
-| Dice distance              | Categorical        | $[0, +1]$            | \cite{dice1945measures}                          |
-
+| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
+| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | [2][7]|
+| City block distance        | Numerical          | $[0, +\infty\rangle$ | [2][7]|
+| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
+| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | [2]|
+| Cosine distance            | Numerical          | $[0, +1]$            | [7]|
+| Correlation distance       | Numerical          | $[0, +2]$            | [7]|
+| Clark distance             | Numerical          | $[0, +\infty\rangle$ | [1]|
+| Soergel distance           | Numerical          | $[0, +1]$            | [2]|
+| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | [4]|
+| Jaccard distance           | Categorical        | $[0, +1]$            | [5]|
+| Dice distance              | Categorical        | $[0, +1]$            | [3]|
 
 ## References
 
