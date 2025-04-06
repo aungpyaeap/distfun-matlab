@@ -1,7 +1,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 # DISTFUN-MATLAB: A collection of distance metrics for data clustering algorithms
-A collection of distance metrics for data clustering algorithms.
+A collection of distance metrics for data clustering algorithms. `ComputeDist(X,dname)` function returns $n \times n$ dissimilarity matrix.
 
 ## Definitions
 - A dataset is denoted by $X^{n \times m}$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
