@@ -92,9 +92,9 @@ disp(D);
 | Dice distance              | Categorical        | $[0, +1]$            | [3]|
 
 ## Converting distance into similarity
-For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as \( d(x_i, x_j) = 1 - s(x_i, x_j) \), allowing for straightforward transformation in both directions \cite{Miyamoto_2022}.
+For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
 
-In contrast, for unbounded distance metrics, the transformation to similarity is typically given by \( s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right) \), where \( \sigma > 0 \) is a parameter \cite{von2007tutorial}.
+For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right)$, where $\sigma > 0$ is a parameter [9].
 
 ## References
 
@@ -111,3 +111,7 @@ In contrast, for unbounded distance metrics, the transformation to similarity is
 [6]:[Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
 
 [7]:[Wierzchon, S. T., & Klopotek, M. (2018). Modern Algorithms of Cluster Analysis (1st ed.). Cham, Switzerland: Springer International Publishing.](https://link.springer.com/book/10.1007/978-3-319-69308-8)
+
+[8]:[Miyamoto, S. (2022). Theory of agglomerative hierarchical clustering (2022nd ed.). Singapore, Singapore: Springer.](https://link.springer.com/book/10.1007/978-981-19-0420-2)
+
+[9]:[Von Luxburg, U. (2007). A tutorial on spectral clustering. Statistics and computing, 17, 395-416.](https://link.springer.com/article/10.1007/s11222-007-9033-z)
