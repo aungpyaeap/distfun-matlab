@@ -1,7 +1,8 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 # DISTFUN-MATLAB: A collection of distance metrics for data clustering algorithms
-A collection of distance metrics for data clustering algorithms. `ComputeDist(X,dname)` function returns $n \times n$ dissimilarity matrix.
+This repository contains MATLAB functions designed to construct dissimilarity matrices using a variety of distance metric functions. It provides a comprehensive toolkit for analyzing and comparing data sets through different distance measures.
+`ComputeDist(X,dname)` function returns $n \times n$ dissimilarity matrix.
 
 ## Definitions
 - A dataset is denoted by $X^{n \times m}$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
@@ -89,6 +90,11 @@ disp(D);
 | Hamming distance           | Categorical        | $[0, +\infty\rangle$ | [4]|
 | Jaccard distance           | Categorical        | $[0, +1]$            | [5]|
 | Dice distance              | Categorical        | $[0, +1]$            | [3]|
+
+## Converting distance into similarity
+For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as \( d(x_i, x_j) = 1 - s(x_i, x_j) \), allowing for straightforward transformation in both directions \cite{Miyamoto_2022}.
+
+In contrast, for unbounded distance metrics, the transformation to similarity is typically given by \( s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right) \), where \( \sigma > 0 \) is a parameter \cite{von2007tutorial}.
 
 ## References
 
