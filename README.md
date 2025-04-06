@@ -76,6 +76,7 @@ disp(D);
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BDice%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B2%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%7C%20%2B%20%7Cx_j%7C%7D%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B2%20%5Ccdot%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%2B%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bjk%7D%7D%20%5Cright%5D" alt="\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]" />
 
+
 | Distance Name     | Data Type | Range       | Ref.                                    |
 |----------------------------|--------------------|----------------------|--------------------------------------------------|
 | Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
