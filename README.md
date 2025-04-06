@@ -55,8 +55,6 @@ disp(D);
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
-
 <img src="https://i.upmath.me/svg/%5Ctext%7BCity%20block%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%5C%7Cx_i%20-%20x_j%5C%7C_1%20%3D%20%20%5Csum_%7Bk%3D1%7D%5Em%20%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C" alt="\text{City block distance: }d(x_i,x_j) =\|x_i - x_j\|_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|" />
 
 <img src="https://i.upmath.me/svg/%5Ctext%7BChebyshev%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%5C%7Cx_i%20-%20x_j%5C%7C_4%20%3D%20%20%5Cmax_%7Bk%3D1%7D%5Em%20%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C" alt="\text{Chebyshev distance: }d(x_i,x_j) =\|x_i - x_j\|_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|" />
