@@ -2,7 +2,7 @@
 
 # Distance Metrics Toolkit (DISTFUN-MATLAB): A collection of distance metric functions for numerical and categorical data dissimilarity
 This repository contains MATLAB functions designed to construct dissimilarity matrices using a variety of distance metric functions. It provides a comprehensive toolkit for analyzing and comparing data sets through different distance measures.
-`ComputeDist(X,dname)` function returns $n \times n$ dissimilarity matrix.
+`compdist(X,dname)` function returns $n \times n$ dissimilarity matrix.
 
 ## Definitions
 - A dataset is denoted by $X^{n \times m}$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
@@ -24,7 +24,7 @@ For any distance metric, the following conditions must be satisfied for any thre
 ```m
 X = readmatrix('fisheriris.csv');
 dname = 'euclidean'; % Choose distance name
-D = ComputeDist(X, dname);
+D = compdist(X, dname);
 disp(D);
 ```
 **For categorical dataset.**
@@ -32,7 +32,7 @@ disp(D);
 T = readtable('sample.csv', VariableNamingRule='preserve');
 X = T{:,:}; % Convert table to array
 dname = 'hamming'; % Choose distance name
-D = ComputeDist(X, dname);
+D = compdist(X, dname);
 disp(D);
 ```
 
@@ -51,29 +51,30 @@ disp(D);
     dice		- Dice distance.
 
 ### Distance metric formulas
-<img src="https://i.upmath.me/svg/%5Ctext%7BEuclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5C%7Cx_i%20-%20x_j%5C%7C_2%20%3D%20%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2%7D" alt="\text{Euclidean distance: }d(x_i,x_j) = \|x_i - x_j\|_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}" />
+- $\text{Euclidean distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BSquared%20Euclidean%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20x_%7Bjk%7D)%5E2" alt="\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2" />
+- $\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BCity%20block%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%5C%7Cx_i%20-%20x_j%5C%7C_1%20%3D%20%20%5Csum_%7Bk%3D1%7D%5Em%20%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C" alt="\text{City block distance: }d(x_i,x_j) =\|x_i - x_j\|_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|" />
+- $\text{City block distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BChebyshev%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%5C%7Cx_i%20-%20x_j%5C%7C_4%20%3D%20%20%5Cmax_%7Bk%3D1%7D%5Em%20%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C" alt="\text{Chebyshev distance: }d(x_i,x_j) =\|x_i - x_j\|_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|" />
+- $\text{Chebyshev distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BCanberra%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20%5Cfrac%7B%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C%7D%7B%7Cx_%7Bik%7D%7C%20%2B%20%7Cx_%7Bjk%7D%7C%7D" alt="\text{Canberra distance: }d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}" />
+- $\text{Canberra distance: }d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BCosine%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7Bx_i%20%5Ccdot%20x_j%7D%7B%5C%7Cx_i%5C%7C%20%5C%7Cx_j%5C%7C%7D%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B%5Csum_%7Bk%3D1%7D%5Em%20x_%7Bik%7D%20x_%7Bjk%7D%7D%7B%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20x_%7Bik%7D%5E2%7D%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20x_%7Bjk%7D%5E2%7D%7D%20%5Cright%5D" alt="\text{Cosine distance: }d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\|x_i\| \|x_j\|} = 1 - \left[ \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}} \right]" />
+- $\text{Cosine distance: }d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\|x_i\| \|x_j\|} = 1 - \left[ \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}} \right]$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BCorrelation%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20%5Cbar%7Bx%7D_i)(x_%7Bjk%7D%20-%20%5Cbar%7Bx%7D_j)%7D%7B%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bik%7D%20-%20%5Cbar%7Bx%7D_i)%5E2%7D%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5Em%20(x_%7Bjk%7D%20-%20%5Cbar%7Bx%7D_j)%5E2%7D%7D%20%5Cright%5D" alt="\text{Correlation distance: }d(x_i,x_j) = 1 - \left[ \frac{\sum_{k=1}^m (x_{ik} - \bar{x}_i)(x_{jk} - \bar{x}_j)}{\sqrt{\sum_{k=1}^m (x_{ik} - \bar{x}_i)^2} \sqrt{\sum_{k=1}^m (x_{jk} - \bar{x}_j)^2}} \right]" />
+- $\text{Correlation distance: }d(x_i,x_j) = 1 - \left[ \frac{\sum_{k=1}^m (x_{ik} - \bar{x}_i)(x_{jk} - \bar{x}_j)}{\sqrt{\sum_{k=1}^m (x_{ik} - \bar{x}_i)^2} \sqrt{\sum_{k=1}^m (x_{jk} - \bar{x}_j)^2}} \right]$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BClark%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csqrt%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20%5Cleft(%5Cfrac%7B%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C%7D%7Bx_%7Bik%7D%20%2B%20x_%7Bjk%7D%7D%5Cright)%5E2%7D" alt="\text{Clark distance: }d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}" />
+- $\text{Clark distance: }d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BSoergel%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Cfrac%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20%7Cx_%7Bik%7D%20-%20x_%7Bjk%7D%7C%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20%5Cmax(x_%7Bik%7D%2Cx_%7Bjk%7D)%7D" alt="\text{Soergel distance: }d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}" />
+- $\text{Soergel distance: }d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BHamming%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%20%5Csum_%7Bk%3D1%7D%5Em%20%5Cmathbb%7BI%7D(x_%7Bik%7D%20%5Cneq%20x_%7Bjk%7D)" alt="\text{Hamming distance: }d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})" />
+- $\text{Hamming distance: }d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BJaccard%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%20%5Ccup%20x_j%7C%7D%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20(x_%7Bik%7D%20%2B%20x_%7Bjk%7D)%20-%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D" alt="\text{Jaccard distance: }d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}" />
+- $\text{Jaccard distance: }d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}$
 
-<img src="https://i.upmath.me/svg/%5Ctext%7BDice%20distance%3A%20%7Dd(x_i%2Cx_j)%20%3D%201%20-%20%5Cfrac%7B2%7Cx_i%20%5Ccap%20x_j%7C%7D%7B%7Cx_i%7C%20%2B%20%7Cx_j%7C%7D%20%3D%201%20-%20%5Cleft%5B%20%5Cfrac%7B2%20%5Ccdot%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%5Ccdot%20x_%7Bjk%7D%7D%7B%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bik%7D%20%2B%20%5Csum_%7Bk%3D1%7D%5E%7Bm%7D%20x_%7Bjk%7D%7D%20%5Cright%5D" alt="\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]" />
+- $\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \left[ \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}} \right]$
+
 
 ### Distance metric data type and ranges
 | Distance Name     | Data Type | Range       | Ref.                                    |
@@ -91,13 +92,13 @@ disp(D);
 | Jaccard distance           | Categorical        | $[0, +1]$            | [5]|
 | Dice distance              | Categorical        | $[0, +1]$            | [3]|
 
-## Converting distance into similarity
+## Transform distance to similarity
 For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
 
 **Example usage.**
 ```m
 X = rand(10,2);
-D = ComputeDist(X, 'cosine');
+D = compdist(X, 'cosine');
 S = 1 - D;
 disp(S);
 ```
@@ -106,7 +107,7 @@ For unbounded distance metrics, the transformation to similarity is typically gi
 **Example usage.**
 ```m
 X = rand(10,2);
-D = ComputeDist(X, 'euclidean');
+D = compdist(X, 'euclidean');
 S = exp(-D.^2);
 disp(S);
 ```
@@ -132,3 +133,19 @@ disp(S);
 [9]:[Von Luxburg, U. (2007). A tutorial on spectral clustering. Statistics and computing, 17, 395-416.](https://link.springer.com/article/10.1007/s11222-007-9033-z)
 
 [10]:[The MathWorks, Inc. (2025). Statistics and machine learning toolbox (Version 24.2.0 R2024b). The MathWorks, Inc.](https://www.mathworks.com/products/statistics.html)
+
+## Citation
+Pyae, A., Low, Y. C., & Chua, H. N. (2024, August). A Combined Distance Metric Approach with Weight Adjustment For Improving Mixed Data Clustering Quality. In 2024 IEEE International Conference on Artificial Intelligence in Engineering and Technology (IICAIET) (pp. 183-188). IEEE.
+```bibtex
+@INPROCEEDINGS{10730392,
+  author={Pyae, Aung and Low, Yeh-Ching and Chua, Hui Na},
+  booktitle={2024 IEEE International Conference on Artificial Intelligence in Engineering and Technology (IICAIET)}, 
+  title={A Combined Distance Metric Approach with Weight Adjustment For Improving Mixed Data Clustering Quality}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={183-188},
+  keywords={Measurement;Refining;Clustering algorithms;Learning (artificial intelligence);Complexity theory;Optimization;Distance Metrics;Mixed Data;Hierarchical Clustering;Unsupervised Learning},
+  doi={10.1109/IICAIET62352.2024.10730392}
+}
+```

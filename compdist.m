@@ -1,4 +1,4 @@
-function D = ComputeDist(dataPoints, dname)
+function D = compdist(dataPoints, dname)
 
 % Get number of data points
 n = size(dataPoints, 1);
