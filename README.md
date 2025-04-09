@@ -74,20 +74,20 @@ disp(D);
 
 
 ### Distance metric data type and ranges
-| Distance Name     | Data Type | Range       | Ref.                                    |
-|----------------------------|--------------------|----------------------|--------------------------------------------------|
-| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
-| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | [2][7]|
-| City block distance        | Numerical          | $[0, +\infty\rangle$ | [2][7]|
-| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | [2][7]|
-| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | [2]|
-| Cosine distance            | Numerical          | $[0, +1]$            | [7]|
-| Correlation distance       | Numerical          | $[0, +2]$            | [7]|
-| Clark distance             | Numerical          | $[0, +\infty\rangle$ | [1]|
-| Soergel distance           | Numerical          | $[0, +1]$            | [2]|
-| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | [4]|
-| Jaccard distance           | Categorical        | $[0, +1]$            | [5]|
-| Dice distance              | Categorical        | $[0, +1]$            | [3]|
+| Distance Name | Data Type | Range | Origin | Ref. |
+|----------|----------|----------|----------|----------|
+| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| City block distance        | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | $d$ | [2]|
+| Cosine distance            | Numerical          | $[0, +1]$            | $s$ | [7]|
+| Correlation distance       | Numerical          | $[0, +2]$            | $d$ | [7]|
+| Clark distance             | Numerical          | $[0, +\infty\rangle$ | $d$ | [1]|
+| Soergel distance           | Numerical          | $[0, +1]$            | $d$ | [2]|
+| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | $d$ | [4]|
+| Jaccard distance           | Categorical        | $[0, +1]$            | $s$ | [5]|
+| Dice distance              | Categorical        | $[0, +1]$            | $s$ | [3]|
 
 ## Transform distance to similarity
 For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
