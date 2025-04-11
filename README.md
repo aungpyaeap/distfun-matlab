@@ -2,7 +2,7 @@
 
 # Distance Metrics Toolkit (DISTFUN-MATLAB): Distance metric functions for numerical and categorical data dissimilarity
 This repository contains MATLAB functions designed to construct dissimilarity matrices using a variety of distance metric functions. It provides a comprehensive toolkit for analyzing and comparing data sets through different distance measures.
-`compdist(X,dname)` function returns $n \times n$ dissimilarity matrix.
+`compdist(X,dname)` function returns $n \times n$ symmetric matrix.
 
 ## Definitions
 - A dataset is denoted by $\mathfrak{X}^{n \times m}$ where $n$ is number of data points (rows) and $m$ is number of features (columns).
