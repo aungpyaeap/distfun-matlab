@@ -99,7 +99,7 @@ D = compdist(X, 'cosine');
 S = 1 - D;
 disp(S);
 ```
-For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i, x_j) = \exp\left(-\frac{d^2(x_i, x_j)}{\sigma^2}\right)$, where $\sigma > 0$ is a parameter [9][10].
+For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i,x_j):= \exp(-\Vert x_i - x_j \Vert^2/2\sigma^2)$ where $\sigma > 0$ is a parameter [9][10].
 
 **Example usage.**
 ```m
