@@ -81,7 +81,7 @@ disp(D);
 | City block distance        | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
 | Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
 | Canberra distance          | Numerical          | $[0, +\infty\rangle$ | $d$ | [2]|
-| Cosine distance            | Numerical          | $[0, +1]$            | $s$ | [7]|
+| Cosine distance            | Numerical          | $[0, +2]$            | $s$ | [7]|
 | Correlation distance       | Numerical          | $[0, +2]$            | $d$ | [7]|
 | Clark distance             | Numerical          | $[0, +\infty\rangle$ | $d$ | [1]|
 | Soergel distance           | Numerical          | $[0, +1]$            | $d$ | [2]|
