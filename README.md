@@ -16,7 +16,7 @@ For any distance metric, the following conditions must be satisfied for any thre
 - Symmetry: $d(x_i, x_j) = d(x_j, x_i)$
 - Triangle inequality: $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j)$
 
-## Usage
+## Example of use
 **For numerical dataset.**
 ```m
 X = readmatrix('fisheriris.csv');
@@ -108,31 +108,7 @@ D = compdist(X, 'euclidean');
 S = exp(-D.^2);
 disp(S);
 ```
-
-## References
-
-1. [Abu Alfeilat, H. A., Hassanat, A. B., Lasassmeh, O., Tarawneh, A. S., Alhasanat, M. B., Eyal Salman, H. S., & Prasath, V. S. (2019). Effects of distance measure choice on k-nearest neighbor classifier performance: a review. Big data, 7(4), 221-248.](https://doi.org/10.1089/big.2018.0175)
-
-2. [Cha, S. H. (2007). Comprehensive survey on distance/similarity measures between probability density functions. City, 1(2), 1.](https://pdodds.w3.uvm.edu/research/papers/others/everything/cha2007a.pdf)
-
-3. [Dice, L. R. (1945). Measures of the amount of ecologic association between species. Ecology, 26(3), 297-302.](https://doi.org/10.2307/1932409)
-
-4. [Hamming, R. W. (1950). Error detecting and error correcting codes. The Bell system technical journal, 29(2), 147-160.](https://doi.org/10.1002/j.1538-7305.1950.tb00463.x)
-
-5. [Murphy, A. H. (1996). The Finley affair: A signal event in the history of forecast verification. Weather and forecasting, 11(1), 3-20.](https://doi.org/10.1175/1520-0434(1996)011%3C0003:TFAASE%3E2.0.CO;2)
-
-6. [Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
-
-7. [Wierzchon, S. T., & Klopotek, M. (2018). Modern Algorithms of Cluster Analysis (1st ed.). Cham, Switzerland: Springer International Publishing.](https://link.springer.com/book/10.1007/978-3-319-69308-8)
-
-8. [Miyamoto, S. (2022). Theory of agglomerative hierarchical clustering (2022nd ed.). Singapore, Singapore: Springer.](https://link.springer.com/book/10.1007/978-981-19-0420-2)
-
-9. [Von Luxburg, U. (2007). A tutorial on spectral clustering. Statistics and computing, 17, 395-416.](https://link.springer.com/article/10.1007/s11222-007-9033-z)
-
-10. [The MathWorks, Inc. (2025). Statistics and machine learning toolbox (Version 24.2.0 R2024b). The MathWorks, Inc.](https://www.mathworks.com/products/statistics.html)
-
 ## Citation
-Pyae, A., Low, Y. C., & Chua, H. N. (2024, August). A Combined Distance Metric Approach with Weight Adjustment For Improving Mixed Data Clustering Quality. In 2024 IEEE International Conference on Artificial Intelligence in Engineering and Technology (IICAIET) (pp. 183-188). IEEE.
 ```bibtex
 @INPROCEEDINGS{10730392,
   author={Pyae, Aung and Low, Yeh-Ching and Chua, Hui Na},
@@ -146,3 +122,15 @@ Pyae, A., Low, Y. C., & Chua, H. N. (2024, August). A Combined Distance Metric A
   doi={10.1109/IICAIET62352.2024.10730392}
 }
 ```
+
+## References
+1. [Abu Alfeilat, H. A., Hassanat, A. B., Lasassmeh, O., Tarawneh, A. S., Alhasanat, M. B., Eyal Salman, H. S., & Prasath, V. S. (2019). Effects of distance measure choice on k-nearest neighbor classifier performance: a review. Big data, 7(4), 221-248.](https://doi.org/10.1089/big.2018.0175)
+2. [Cha, S. H. (2007). Comprehensive survey on distance/similarity measures between probability density functions. City, 1(2), 1.](https://pdodds.w3.uvm.edu/research/papers/others/everything/cha2007a.pdf)
+3. [Dice, L. R. (1945). Measures of the amount of ecologic association between species. Ecology, 26(3), 297-302.](https://doi.org/10.2307/1932409)
+4. [Hamming, R. W. (1950). Error detecting and error correcting codes. The Bell system technical journal, 29(2), 147-160.](https://doi.org/10.1002/j.1538-7305.1950.tb00463.x)
+5. [Murphy, A. H. (1996). The Finley affair: A signal event in the history of forecast verification. Weather and forecasting, 11(1), 3-20.](https://doi.org/10.1175/1520-0434(1996)011%3C0003:TFAASE%3E2.0.CO;2)
+6. [Scitovski, R., Sabo, K., Martínez-Álvarez, F., & Ungar, Š. (2021). Cluster analysis and applications (2021st ed.). Cham, Switzerland: Springer Nature.](https://link.springer.com/book/10.1007/978-3-030-74552-3)
+7. [Wierzchon, S. T., & Klopotek, M. (2018). Modern Algorithms of Cluster Analysis (1st ed.). Cham, Switzerland: Springer International Publishing.](https://link.springer.com/book/10.1007/978-3-319-69308-8)
+8. [Miyamoto, S. (2022). Theory of agglomerative hierarchical clustering (2022nd ed.). Singapore, Singapore: Springer.](https://link.springer.com/book/10.1007/978-981-19-0420-2)
+9. [Von Luxburg, U. (2007). A tutorial on spectral clustering. Statistics and computing, 17, 395-416.](https://link.springer.com/article/10.1007/s11222-007-9033-z)
+10. [The MathWorks, Inc. (2025). Statistics and machine learning toolbox (Version 24.2.0 R2024b). The MathWorks, Inc.](https://www.mathworks.com/products/statistics.html)
