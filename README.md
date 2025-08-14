@@ -57,7 +57,7 @@ disp(D);
 ### Distance metric formulas
 - $\text{Euclidean distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
 
-- $\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2$
+- $\text{Squared Euclidean distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert^2 = \sum_{k=1}^m (x_{ik} - x_{jk})^2$
 
 - $\text{City block distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|$
 
