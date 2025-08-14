@@ -61,7 +61,7 @@ disp(D);
 | Euclidean distance         |$d(x_i,x_j) = \Vert x_i - x_j\Vert_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
 | Squared Euclidean distance |$d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
 | City block distance        |$d(x_i,x_j) = \Vert x_i - x_j\Vert_1 =  \sum_{k=1}^m \vert x_{ik} - x_{jk}\vert$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
-| Chebyshev distance         |$d(x_i,x_j) = \Vert x_i - x_j\Vert_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Chebyshev distance         |$d(x_i,x_j) = \Vert x_i - x_j\Vert_4 =  \max_{k=1}^m \vert x_{ik} - x_{jk}\vert$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
 | Canberra distance          |$d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2]|
 | Cosine distance            |$d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\Vert x_i\Vert \Vert x_j\Vert} = 1 - \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}}$| Numerical          | $[0, +2]$            | $s$ | [7]|
 | Correlation distance       |$d(x_i, x_j) = 1 - \frac{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})(x_{jk} - \bar{x_j})}{\sqrt{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})^2} \sqrt{\sum_{k=1}^{m} (x_{jk} - \bar{x_j})^2}}$| Numerical          | $[0, +2]$            | $d$ | [7]|
