@@ -92,7 +92,7 @@ disp(D);
 | Correlation distance       | Numerical          | $[0, +2]$            | $d$ | [7]|
 | Clark distance             | Numerical          | $[0, +\infty\rangle$ | $d$ | [1]|
 | Soergel distance           | Numerical          | $[0, +1]$            | $d$ | [2]|
-| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | $d$ | [4]|
+| Hamming distance           | Categorical        | $[0, m]$ | $d$ | [4]|
 | Jaccard distance           | Categorical        | $[0, +1]$            | $s$ | [5]|
 | Dice distance              | Categorical        | $[0, +1]$            | $s$ | [3]|
 
