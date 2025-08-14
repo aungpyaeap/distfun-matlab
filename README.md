@@ -56,46 +56,20 @@ disp(D);
     dice		- Dice distance.
 
 ### Distance metric formulas
-- $\text{Euclidean distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$
-
-- $\text{Squared Euclidean distance: }d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2$
-
-- $\text{City block distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|$
-
-- $\text{Chebyshev distance: }d(x_i,x_j) = \Vert x_i - x_j\Vert_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|$
-
-- $\text{Canberra distance: }d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$
-
-- $\text{Cosine distance: }d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\Vert x_i\Vert \Vert x_j\Vert} = 1 - \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}}$
-
-- $\text{Correlation distance: }d(x_i, x_j) = 1 - \frac{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})(x_{jk} - \bar{x_j})}{\sqrt{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})^2} \sqrt{\sum_{k=1}^{m} (x_{jk} - \bar{x_j})^2}}$
-
-- $\text{Clark distance: }d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}$
-
-- $\text{Soergel distance: }d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}$
-
-- $\text{Hamming distance: }d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})$
-
-- $\text{Jaccard distance: }d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}$
-
-- $\text{Dice distance: }d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}}$
-
-
-### Distance metric data type and ranges
-| Distance Name | Data Type | Range | Origin | Ref. |
-|----------|----------|----------|----------|----------|
-| Euclidean distance         | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
-| Squared Euclidean distance | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
-| City block distance        | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
-| Chebyshev distance         | Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
-| Canberra distance          | Numerical          | $[0, +\infty\rangle$ | $d$ | [2]|
-| Cosine distance            | Numerical          | $[0, +2]$            | $s$ | [7]|
-| Correlation distance       | Numerical          | $[0, +2]$            | $d$ | [7]|
-| Clark distance             | Numerical          | $[0, +\infty\rangle$ | $d$ | [1]|
-| Soergel distance           | Numerical          | $[0, +1]$            | $d$ | [2]|
-| Hamming distance           | Categorical        | $[0, +\infty\rangle$ | $d$ | [4]|
-| Jaccard distance           | Categorical        | $[0, +1]$            | $s$ | [5]|
-| Dice distance              | Categorical        | $[0, +1]$            | $s$ | [3]|
+| Distance Name | Formula | Data Type | Range | Origin | Ref. |
+|----------|----------|----------|----------|----------|----------|
+| Euclidean distance         |$d(x_i,x_j) = \Vert x_i - x_j\Vert_2 =  \sqrt{\sum_{k=1}^m (x_{ik} - x_{jk})^2}$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Squared Euclidean distance |$d(x_i,x_j) = \sum_{k=1}^m (x_{ik} - x_{jk})^2$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| City block distance        |$d(x_i,x_j) = \Vert x_i - x_j\Vert_1 =  \sum_{k=1}^m |x_{ik} - x_{jk}|$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Chebyshev distance         |$d(x_i,x_j) = \Vert x_i - x_j\Vert_4 =  \max_{k=1}^m |x_{ik} - x_{jk}|$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2][7]|
+| Canberra distance          |$d(x_i,x_j) = \sum_{k=1}^{m} \frac{|x_{ik} - x_{jk}|}{|x_{ik}| + |x_{jk}|}$| Numerical          | $[0, +\infty\rangle$ | $d$ | [2]|
+| Cosine distance            |$d(x_i,x_j) = 1 - \frac{x_i \cdot x_j}{\Vert x_i\Vert \Vert x_j\Vert} = 1 - \frac{\sum_{k=1}^m x_{ik} x_{jk}}{\sqrt{\sum_{k=1}^m x_{ik}^2} \sqrt{\sum_{k=1}^m x_{jk}^2}}$| Numerical          | $[0, +2]$            | $s$ | [7]|
+| Correlation distance       |$d(x_i, x_j) = 1 - \frac{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})(x_{jk} - \bar{x_j})}{\sqrt{\sum_{k=1}^{m} (x_{ik} - \bar{x_i})^2} \sqrt{\sum_{k=1}^{m} (x_{jk} - \bar{x_j})^2}}$| Numerical          | $[0, +2]$            | $d$ | [7]|
+| Clark distance             |$d(x_i,x_j) = \sqrt{\sum_{k=1}^{m} \left(\frac{|x_{ik} - x_{jk}|}{x_{ik} + x_{jk}}\right)^2}$| Numerical          | $[0, +\infty\rangle$ | $d$ | [1]|
+| Soergel distance           |$d(x_i,x_j) = \frac{\sum_{k=1}^{m} |x_{ik} - x_{jk}|}{\sum_{k=1}^{m} \max(x_{ik},x_{jk})}$| Numerical          | $[0, +1]$            | $d$ | [2]|
+| Hamming distance           |$d(x_i,x_j) = \sum_{k=1}^m \mathbb{I}(x_{ik} \neq x_{jk})$| Categorical        | $[0, +\infty\rangle$ | $d$ | [4]|
+| Jaccard distance           |$d(x_i,x_j) = 1 - \frac{|x_i \cap x_j|}{|x_i \cup x_j|} = 1 - \frac{\sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} (x_{ik} + x_{jk}) - \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}$| Categorical        | $[0, +1]$            | $s$ | [5]|
+| Dice distance              |$d(x_i,x_j) = 1 - \frac{2|x_i \cap x_j|}{|x_i| + |x_j|} = 1 - \frac{2 \cdot \sum_{k=1}^{m} x_{ik} \cdot x_{jk}}{\sum_{k=1}^{m} x_{ik} + \sum_{k=1}^{m} x_{jk}}$| Categorical        | $[0, +1]$            | $s$ | [3]|
 
 ## Transform distance to similarity
 For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
