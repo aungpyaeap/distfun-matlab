@@ -19,17 +19,25 @@ For any distance metric, the following conditions must be satisfied for any thre
 ## Example of use
 **For numerical dataset.**
 ```m
-X = readmatrix('fisheriris.csv');
-dname = 'euclidean'; % Choose distance name
-D = compdist(X, dname);
+X_numerical = rand(10,2);
+D = compdist(X_numerical, 'euclidean');
 disp(D);
+
+% Using pdist - direct call distfun
+D = squareform(pdist(X_numerical, @(XI, XJ) distfun(XI, XJ, 'euclidean')));
+disp(D);
+
+% Using pdist2 - direct call distfun
+D = pdist2(X_numerical, X_numerical, @(XI, XJ) distfun(XI, XJ, 'euclidean'));
+disp(D);
+
 ```
 **For categorical dataset.**
 ```m
 T = readtable('sample.csv', VariableNamingRule='preserve');
 X = T{:,:}; % Convert table to array
 dname = 'hamming'; % Choose distance name
-D = compdist(X, dname);
+D = compdist(X_categorical, 'hamming');
 disp(D);
 ```
 
