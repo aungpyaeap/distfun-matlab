@@ -17,7 +17,7 @@ For any distance metric, the following conditions must be satisfied for any thre
 - Triangle inequality: $d(x_i, x_j) \leq d(x_i, x_k) + d(x_k, x_j)$
 
 ## Example of use
-**For numerical dataset.**
+**For numerical dataset**
 ```m
 X_numerical = rand(10,2);
 D = compdist(X_numerical, 'euclidean');
@@ -32,7 +32,7 @@ D = pdist2(X_numerical, X_numerical, @(XI, XJ) distfun(XI, XJ, 'euclidean'));
 disp(D);
 
 ```
-**For categorical dataset.**
+**For categorical dataset**
 ```m
 T = readtable('sample.csv', VariableNamingRule='preserve');
 X = T{:,:}; % Convert table to array
@@ -100,7 +100,7 @@ disp(D);
 ## Transform distance to similarity
 For bounded distances like cosine, Jaccard, and Dice, the relationship can be expressed as $d(x_i, x_j) = 1 - s(x_i, x_j)$, allowing for straightforward transformation in both directions [8].
 
-**Example usage.**
+**Example usage**
 ```m
 X = rand(10,2);
 D = compdist(X, 'cosine');
@@ -109,7 +109,7 @@ disp(S);
 ```
 For unbounded distance metrics, the transformation to similarity is typically given by $s(x_i,x_j):= \exp(-\frac{\Vert x_i - x_j \Vert^2}{2\sigma^2})$ where $\sigma > 0$ is a parameter [9][10].
 
-**Example usage.**
+**Example usage**
 ```m
 X = rand(10,2);
 D = compdist(X, 'euclidean');
