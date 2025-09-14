@@ -18,16 +18,12 @@ For any distance metric, the following conditions must be satisfied for any thre
 ## Example of use
 **For numerical dataset**
 ```m
-X_numerical = rand(10,2);
-D = compdist(X_numerical, 'euclidean');
+% Using pre defined function
+D = compdist(points, "euclidean");
 disp(D);
 
-% Using pdist - direct call distfun
-D = squareform(pdist(X_numerical, @(XI, XJ) distfun(XI, XJ, 'euclidean')));
-disp(D);
-
-% Using pdist2 - direct call distfun
-D = pdist2(X_numerical, X_numerical, @(XI, XJ) distfun(XI, XJ, 'euclidean'));
+% Using pdist2
+D = pdist2(points, points, @(XI, XJ) distfun(XI, XJ, "euclidean"));
 disp(D);
 
 ```
