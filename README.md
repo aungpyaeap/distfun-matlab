@@ -25,7 +25,6 @@ disp(D);
 % Using pdist2
 D = pdist2(points, points, @(XI, XJ) distfun(XI, XJ, "euclidean"));
 disp(D);
-
 ```
 **For categorical dataset**
 ```m
